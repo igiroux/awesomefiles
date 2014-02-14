@@ -9,7 +9,6 @@
 ]]
 
 local gears     = require("gears")
-local beautiful = require("beautiful")
 
 -- Define colours, icons, and wallpapers
 beautiful.init(__dir__ .. "/themes/copyburn/theme.lua")

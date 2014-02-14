@@ -10,6 +10,7 @@
 awful           = require("awful")
 awful.rules     = require("awful.rules")
 awful.autofocus = require("awful.autofocus")
+beautiful       = require("beautiful")
 
 -- Variable definitions
 __dir__         = os.getenv('HOME') .. "/.config/awesome"
