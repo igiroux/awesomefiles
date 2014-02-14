@@ -11,13 +11,11 @@
 local obvious = require("obvious")
 local wibox   = require("wibox")
 
--- Textclock widget
+-- Create a textclock widget
 clock = awful.widget.textclock(" %H:%M ")
 
--- Create a textclock widget
 
 top_wiboxes = {}
-bot_wiboxes = {}
 promptbox   = {}
 layoutbox   = {}
 
