@@ -10,10 +10,7 @@
 
 local obvious = require("obvious")
 local wibox   = require("wibox")
-
--- Create a textclock widget
-clock = awful.widget.textclock(" %H:%M ")
-
+local w = require("lib.widgets")
 
 top_wiboxes = {}
 promptbox   = {}
@@ -97,8 +94,10 @@ for s = 1, screen.count() do
   -- Widgets that are aligned to the right
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then right_layout:add(wibox.widget.systray()) end
-  right_layout:add(clock)
+  right_layout:add(w.clock())
+  right_layout:add(w.separator())
   right_layout:add(obvious.volume_alsa())
+  right_layout:add(w.separator())
   right_layout:add(layoutbox[s])
 
   -- Now bring it all together (with the tasklist in the middle)
