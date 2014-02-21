@@ -43,4 +43,4 @@ function poweroff()
   run(zqt .. "'Shut down and power-off the system' && systemctl poweroff")
 end
 
--- vim:ts=8:sw=2:sts=2:tw=80:et
+-- vim:ft=lua:ts=8:sw=2:sts=2:tw=80:fenc=utf-8:et
