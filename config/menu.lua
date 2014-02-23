@@ -27,7 +27,7 @@ develop_menu = {
 www_menu = {
   { "&Chromium",     "chromium"         },
   { "&Firefox",      "firefox"          },
-  { "&Pidgin",       "pidgin"           },
+  { "&Psi+",         "psi-plus"         },
   { "&Transmission", "transmission-gtk" }
 }
 
