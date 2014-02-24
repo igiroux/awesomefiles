@@ -28,6 +28,7 @@ www_menu = {
   { "&Chromium",     "chromium"         },
   { "&Firefox",      "firefox"          },
   { "&Psi+",         "psi-plus"         },
+  { "&FileZilla",    "filezilla"        },
   { "&Transmission", "transmission-gtk" }
 }
 
@@ -40,11 +41,21 @@ power_menu = {
   { "&Power Off",   p.poweroff    }
 }
 
+media_menu = {
+  { "&SMplayer",  smplayer }
+}
+
+system_menu = {
+  { "&PCManFM",  pcmanfm }
+}
+
 -- Create a main menu
 main_menu = awful.menu({
   items = {
     { "&Develop",  develop_menu },
     { "&Internet", www_menu     },
+    { "&Media",    media_menu   },
+    { "&System",   system_menu  },
     { "&Awesome",  awesome_menu },
     { "&Power",    power_menu   }
   },
