@@ -29,7 +29,12 @@ www_menu = {
   { "&Firefox",      "firefox"          },
   { "&Psi+",         "psi-plus"         },
   { "&FileZilla",    "filezilla"        },
+  { "&Skype",        "skype"            },
   { "&Transmission", "transmission-gtk" }
+}
+
+graphic_menu = {
+  { "&Gimp",    "gimp" }
 }
 
 power_menu = {
@@ -54,6 +59,7 @@ main_menu = awful.menu({
   items = {
     { "&Develop",  develop_menu },
     { "&Internet", www_menu     },
+    { "&Graphic",  graphic_menu },
     { "&Media",    media_menu   },
     { "&System",   system_menu  },
     { "&Awesome",  awesome_menu },
