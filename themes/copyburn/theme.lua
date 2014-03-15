@@ -18,7 +18,7 @@ theme.wallpaper                                 = theme.dir .. "/wall.jpg"
 -- }}}
 
 -- {{{ Fonts
-theme.font                                      = "Tamsyn 10.5"
+theme.font                                      = "Terminus 9"
 theme.taglist_font                              = "Clear Sans 11"
 -- }}}
 
