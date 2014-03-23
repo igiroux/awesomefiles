@@ -57,7 +57,10 @@ awful.rules.rules = {
     rule       = { class = "jetbrains-phpstorm" },
     properties = { tag = tags[1][6] }
   },
-
+  {
+    rule       = { class = "subl3" },
+    properties = { tag = [1][7] }
+  },
   {
     rule_any   = { class = { "Psi-plus" } },
     except     = { instance = "main" },
