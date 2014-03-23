@@ -59,7 +59,7 @@ awful.rules.rules = {
   },
 
   {
-    rule       = { class = "subl3" },
+    rule       = { class = "Subl3" },
     properties = { tag = tags[1][7] }
   },
 
