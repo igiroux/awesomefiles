@@ -34,7 +34,8 @@ www_menu = {
 }
 
 graphic_menu = {
-  { "&Gimp",    "gimp" }
+  { "&Gimp",     "gimp" },
+  { "G&PicView", "gpicview" }
 }
 
 power_menu = {
@@ -47,11 +48,11 @@ power_menu = {
 }
 
 media_menu = {
-  { "&SMplayer",  smplayer }
+  { "&SMplayer",  "smplayer" }
 }
 
 system_menu = {
-  { "&PCManFM",  pcmanfm }
+  { "&PCManFM",  "pcmanfm" }
 }
 
 -- Create a main menu
