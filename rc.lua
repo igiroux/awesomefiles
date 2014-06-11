@@ -17,7 +17,7 @@ __dir__         = os.getenv('HOME') .. "/.config/awesome"
 terminal        = "urxvtc"
 editor          = os.getenv("EDITOR")
 editor_cmd      = terminal .. " -e " .. editor
-browser         = "chromium"
+browser         = "firefox"
 screensaver     = "xscreensaver-command -activate"
 modkey          = "Mod4"
 

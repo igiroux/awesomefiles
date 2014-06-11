@@ -76,6 +76,11 @@ awful.rules.rules = {
   },
 
   {
+    rule       = { class = "Thunderbird" },
+    properties = { tag = tags[1][8] }
+  },
+
+  {
     rule       = { class = "Skype" },
     except     = { role = "ConversationsWindow" },
     properties = { tag = tags[1][4] },
