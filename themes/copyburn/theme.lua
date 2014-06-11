@@ -18,8 +18,8 @@ theme.wallpaper                                 = theme.dir .. "/wall.jpg"
 -- }}}
 
 -- {{{ Fonts
-theme.font                                      = "Terminus 9"
-theme.taglist_font                              = "Clear Sans 11"
+theme.font                                      = "Terminus 11"
+theme.taglist_font                              = "Clear Sans 14"
 -- }}}
 
 -- {{{ Colors
