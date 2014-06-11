@@ -10,7 +10,9 @@
 
 local obvious = require("obvious")
 local wibox   = require("wibox")
+
 local w = require("lib.widgets")
+local b = require("lib.battery")
 
 top_wiboxes = {}
 promptbox   = {}
@@ -72,10 +74,10 @@ for s = 1, screen.count() do
   -- We need one layoutbox per screen.
   layoutbox[s] = awful.widget.layoutbox(s)
   layoutbox[s]:buttons(awful.util.table.join(
-                         awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
-                         awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end),
-                         awful.button({ }, 4, function () awful.layout.inc(layouts, 1) end),
-                         awful.button({ }, 5, function () awful.layout.inc(layouts, -1) end)))
+                         awful.button({ }, 1, function () awful.layout.inc(1, mouse.screen, layouts) end),
+                         awful.button({ }, 3, function () awful.layout.inc(-1, mouse.screen, layouts) end),
+                         awful.button({ }, 4, function () awful.layout.inc(1, mouse.screen, layouts) end),
+                         awful.button({ }, 5, function () awful.layout.inc(-1, mouse.screen, layouts) end)))
   -- Create a taglist widget
   taglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, taglist.buttons)
 
@@ -99,6 +101,10 @@ for s = 1, screen.count() do
   right_layout:add(w.separator())
   right_layout:add(obvious.volume_alsa())
   right_layout:add(w.separator())
+  if b.has_battery() then
+    right_layout:add(obvious.battery())
+    right_layout:add(w.separator())
+  end
   right_layout:add(layoutbox[s])
 
   -- Now bring it all together (with the tasklist in the middle)
