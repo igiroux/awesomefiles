@@ -9,6 +9,68 @@
 ]]
 
 local mousefinder = require("awful.mouse.finder")()
+local naughty     = require 'naughty'
+local volume      = require 'lib.volume'
+local tonumber    = tonumber
+
+local do_volume_notification
+do
+  local volume_icon_base = os.getenv('HOME') .. "/.config/awesome/icons/"
+  local volume_notification
+
+  do_volume_notification = function(args)
+    if args.icon then
+      args.icon = volume_icon_base .. args.icon
+    end
+
+    if volume_notification and volume_notification.box.visible then
+      args.replaces_id = volume_notification.id
+    end
+
+    volume_notification = naughty.notify(args)
+  end
+end
+
+local function louder()
+    local volume = volume.increment()
+
+    do_volume_notification {
+      title = 'Volume Changed',
+      text = tostring(volume) .. '%',
+      icon = 'stock_volume-max.png',
+      opacity = volume / 100,
+    }
+end
+
+
+local function quieter()
+    local volume = volume.decrement()
+
+    do_volume_notification {
+      title = 'Volume Changed',
+      text = tostring(volume) .. '%',
+      icon = 'stock_volume-min.png',
+      opacity = volume / 100,
+    }
+end
+
+local function togglemute()
+    local state = volume.toggle()
+
+    if state then
+      do_volume_notification {
+        title = 'Volume Changed',
+        text = 'Muted',
+        icon = 'stock_volume-mute.png'
+      }
+    else
+      do_volume_notification {
+        title = 'Volume Changed',
+        text = 'Unmuted',
+        icon = 'stock_volume-max.png'
+      }
+    end
+end
 
 -- Mouse bindings
 root.buttons(awful.util.table.join(
@@ -53,6 +115,11 @@ globalkeys = awful.util.table.join(
 
   -- Mouse finder
   awful.key({ modkey,           }, "g" ,     function () mousefinder.find(mousefinder) end),
+
+  -- Advanced Volume Control
+  awful.key({                   }, "XF86AudioRaiseVolume", louder),
+  awful.key({                   }, "XF86AudioLowerVolume", quieter),
+  awful.key({                   }, "XF86AudioMute",        togglemute),
 
   -- Standard program
   awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
