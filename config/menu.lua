@@ -28,6 +28,7 @@ develop_menu = {
 www_menu = {
   { "&Chromium",     "chromium"         },
   { "&Firefox",      "firefox"          },
+  { "&Thunderbird",  "thunderbird"      },
   { "&Psi+",         "psi-plus"         },
   { "&FileZilla",    "filezilla"        },
   { "&Skype",        "skype"            },
