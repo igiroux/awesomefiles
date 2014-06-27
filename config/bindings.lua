@@ -121,6 +121,9 @@ globalkeys = awful.util.table.join(
   awful.key({                   }, "XF86AudioLowerVolume", quieter),
   awful.key({                   }, "XF86AudioMute",        togglemute),
 
+  -- Misc
+  awful.key({                   }, "XF86HomePage", "firefox"),
+
   -- Standard program
   awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
   awful.key({                   }, "Print",
