@@ -128,7 +128,7 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
   awful.key({                   }, "Print",
     function ()
-      awful.util.spawn_with_shell("scrot -e 'mv $f ~/media/pictures/screnshots/ 2>/dev/null'")
+      awful.util.spawn_with_shell("scrot -e 'mv $f ~/media/pictures/screenshots/ 2>/dev/null'")
     end),
   awful.key({ modkey, "Control" }, "r",     awesome.restart),
   awful.key({ modkey, "Shift"   }, "q",     awesome.quit),
