@@ -15,7 +15,7 @@ beautiful       = require("beautiful")
 -- Variable definitions
 __dir__         = os.getenv('HOME') .. "/.config/awesome"
 terminal        = "urxvtc"
-editor          = os.getenv("EDITOR")
+editor          = "vim"
 editor_cmd      = terminal .. " -e " .. editor
 browser         = "firefox"
 screensaver     = "xscreensaver-command -activate"
