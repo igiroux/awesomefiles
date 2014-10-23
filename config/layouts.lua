@@ -3,7 +3,7 @@
   Definition of layouts
 
   Part of Awesome WM config
-  by Sergey Yakovlev (me@klay.me)
+  by Serghei Iakovlev (sadhooklau@gmail.com)
   https://github.com/sergeyklay
 
 ]]

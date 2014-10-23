@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
--- @author Sergey Yakovlev &lt;me@klay.me&gt;
--- @copyright 2014 Sergey Yakovelev
+-- @author Serghei Iakovlev &lt;sadhooklay@gmail.com&gt;
+-- @copyright 2014 Serghei Iakovelev
 -- @release v1.0.2
 --------------------------------------------------------------------------------
 

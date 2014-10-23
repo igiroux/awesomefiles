@@ -3,7 +3,7 @@
   Wigtes library
 
   Part of Awesome WM config
-  by Sergey Yakovlev (me@klay.me)
+  by Serghei Iakovlev (sadhooklay@gmail.com)
   https://github.com/sergeyklay
 
 ]]

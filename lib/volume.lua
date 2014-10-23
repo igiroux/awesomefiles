@@ -3,7 +3,7 @@
   Volume lib
 
   Part of Awesome WM config
-  by Sergey Yakovlev (me@klay.me)
+  by Serghei Iakovlev (sadhooklay@gmail.com)
   https://github.com/sergeyklay
 
   Author: Rob "hoelzro" Hoelz <rob@hoelz.ro>

@@ -3,7 +3,7 @@
   Power management
 
   Part of Awesome WM config
-  by Sergey Yakovlev (me@klay.me)
+  by Serghei Iakovlev (sadhooklay@gmail.com)
   https://github.com/sergeyklay
 
   For systems with systemd only! Modify this for your system if it needed.
