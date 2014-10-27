@@ -99,7 +99,7 @@ for s = 1, screen.count() do
   right_layout:add(w.separator())
   right_layout:add(w.clock())
   right_layout:add(w.separator())
-  right_layout:add(obvious.volume_alsa())
+  right_layout:add(obvious.volume_alsa('1', 'PCM'))
   right_layout:add(w.separator())
   if b.has_battery() then
     right_layout:add(obvious.battery())
