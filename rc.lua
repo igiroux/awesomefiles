@@ -13,9 +13,9 @@ awful.autofocus = require("awful.autofocus")
 beautiful       = require("beautiful")
 
 -- Variable definitions
-__dir__         = os.getenv('HOME') .. "/.config/awesome"
-terminal        = "urxvtc"
-editor          = "vim"
+__dir__         = awful.util.getdir('config')
+terminal        = "lxterminal"
+editor          = os.getenv("EDITOR") or "vim"
 editor_cmd      = terminal .. " -e " .. editor
 browser         = "firefox"
 screensaver     = "xscreensaver-command -activate"

@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 -- @author Serghei Iakovlev &lt;sadhooklay@gmail.com&gt;
 -- @copyright 2014 Serghei Iakovelev
--- @release v1.0.2
+-- @release v1.0.3
 --------------------------------------------------------------------------------
 
 --- Copyburn Theme
@@ -13,13 +13,13 @@
 
 -- {{{ Main
 theme                                           = {}
-theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/copyburn"
+theme.dir                                       = awful.util.getdir('config') .. "/themes/copyburn"
 theme.wallpaper                                 = theme.dir .. "/wall.jpg"
 -- }}}
 
 -- {{{ Fonts
-theme.font                                      = "Terminus 11"
-theme.taglist_font                              = "Clear Sans 14"
+theme.font                                      = "ubuntu mono 11"
+theme.taglist_font                              = "Ubuntu 13"
 -- }}}
 
 -- {{{ Colors
@@ -125,7 +125,7 @@ theme.layout_max                                = theme.dir .. "/icons/layout/ma
 theme.layout_fullscreen                         = theme.dir .. "/icons/layout/fullscreen.png"
 theme.layout_tilebottom                         = theme.dir .. "/icons/layout/tilebottom.png"
 theme.layout_tileleft                           = theme.dir .. "/icons/layout/tileleft.png"
-theme.layout_tile                               = theme.dir .. "/iconslayout/tile.png"
+theme.layout_tile                               = theme.dir .. "/iconsi/layout/tile.png"
 theme.layout_tiletop                            = theme.dir .. "/icons/layout/tiletop.png"
 theme.layout_spiral                             = theme.dir .. "/icons/layout/spiral.png"
 theme.layout_dwindle                            = theme.dir .. "/icons/layou/dwindle.png"
