@@ -7,7 +7,7 @@ My Awesome WM config
 ## Requirements
 
 * Tango Icon Theme
-* LXTerminal
+* Rxvt Unicode
 * Vim
 
 ## License

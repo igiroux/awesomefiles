@@ -15,7 +15,7 @@ dedug           = require("lib.debug")
 
 -- Variable definitions
 __dir__         = awful.util.getdir('config')
-terminal        = "lxterminal"
+terminal        = "urxvtc"
 editor          = os.getenv("EDITOR") or "vim"
 editor_cmd      = terminal .. " -e " .. editor
 browser         = "firefox"
