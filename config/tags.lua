@@ -12,7 +12,7 @@
 tags = {
   -- Impractical in the tag names use words
   -- because they will spend valuable panel space
-  names   = { "⌘", "☮", "❤", "☢", "✿", "★", "✪", "❖", "☯" },
+  names   = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
 
   layout  = {
     layouts[3],
