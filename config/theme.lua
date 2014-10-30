@@ -8,11 +8,10 @@
 
 ]]
 
-local gears     = require("gears")
+local gears = require("gears")
 
 -- Define colours, icons, and wallpapers
-beautiful.init(__dir__ .. "/themes/copyburn/theme.lua")
-
+beautiful.init('/usr/share/awesome/themes/zenburn/theme.lua')
 
 -- Wallpaper
 if beautiful.wallpaper then
