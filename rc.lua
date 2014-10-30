@@ -11,6 +11,7 @@ awful           = require("awful")
 awful.rules     = require("awful.rules")
 awful.autofocus = require("awful.autofocus")
 beautiful       = require("beautiful")
+dedug           = require("lib.debug")
 
 -- Variable definitions
 __dir__         = awful.util.getdir('config')
@@ -22,7 +23,7 @@ screensaver     = "xscreensaver-command -activate"
 modkey          = "Mod4"
 
 -- Open system files and execute their contents as Lua chunks
-dofile(__dir__ .. "/config/debug.lua")
+dofile(__dir__ .. "/config/errors.lua")
 dofile(__dir__ .. "/config/theme.lua")
 dofile(__dir__ .. "/config/layouts.lua")
 dofile(__dir__ .. "/config/tags.lua")
