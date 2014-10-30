@@ -8,11 +8,18 @@
 
 ]]
 
-local obvious = require("obvious")
-local wibox   = require("wibox")
+local obvious = {
+  wlan    = require("obvious.wlan"),
+  volume  = require("obvious.volume_alsa"),
+  battery = require("obvious.battery")
+}
 
-local w = require("lib.widgets")
-local b = require("lib.battery")
+local wibox = require("wibox")
+
+local lib = {
+  widget  = require("lib.widgets"),
+  battery = require("lib.battery")
+}
 
 top_wiboxes = {}
 promptbox   = {}
@@ -96,14 +103,16 @@ for s = 1, screen.count() do
   -- Widgets that are aligned to the right
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then right_layout:add(wibox.widget.systray()) end
-  right_layout:add(w.separator())
-  right_layout:add(w.clock())
-  right_layout:add(w.separator())
-  right_layout:add(obvious.volume_alsa('1', 'PCM'))
-  right_layout:add(w.separator())
-  if b.has_battery() then
+  right_layout:add(lib.widget.separator())
+  right_layout:add(lib.widget.clock())
+  right_layout:add(lib.widget.separator())
+  right_layout:add(obvious.wlan().widget)
+  right_layout:add(lib.widget.separator())
+  right_layout:add(obvious.volume('1', 'PCM'))
+  right_layout:add(lib.widget.separator())
+  if lib.battery.has_battery() then
     right_layout:add(obvious.battery())
-    right_layout:add(w.separator())
+    right_layout:add(lib.widget.separator())
   end
   right_layout:add(layoutbox[s])
 
