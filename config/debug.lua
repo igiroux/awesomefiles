@@ -33,4 +33,12 @@ do
   end)
 end
 
+-- shortcut for naughty.notify
+function alert(msg)
+  naughty.notify {
+    title = 'Alert!',
+    text = tostring(msg),
+  }
+end
+
 -- vim:ft=lua:ts=8:sw=2:sts=2:tw=78:fenc=utf-8:et

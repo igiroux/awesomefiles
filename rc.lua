@@ -22,7 +22,7 @@ screensaver     = "xscreensaver-command -activate"
 modkey          = "Mod4"
 
 -- Open system files and execute their contents as Lua chunks
-dofile(__dir__ .. "/config/errors.lua")
+dofile(__dir__ .. "/config/debug.lua")
 dofile(__dir__ .. "/config/theme.lua")
 dofile(__dir__ .. "/config/layouts.lua")
 dofile(__dir__ .. "/config/tags.lua")
