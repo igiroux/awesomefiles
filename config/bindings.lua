@@ -8,8 +8,7 @@
 
 ]]
 
-local mousefinder = require("awful.mouse.finder")()
-local naughty     = require 'naughty'
+local mousefinder = require 'awful.mouse.finder'()
 local volume      = require 'lib.volume'
 local tonumber    = tonumber
 

@@ -13,7 +13,7 @@
 local popen    = io.popen
 local execute  = os.execute
 local tonumber = tonumber
-local awful = require("awful")
+local awful    = require 'awful'
 
 local volume   = {}
 

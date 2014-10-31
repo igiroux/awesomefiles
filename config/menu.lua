@@ -8,8 +8,8 @@
 
 ]]
 
-local p = require("lib.power")
-local menubar = require("menubar")
+local p = require 'lib.power'
+local menubar = require 'menubar'
 
 awesome_menu = {
   { "&Manual",  terminal .. " -e man awesome"         },

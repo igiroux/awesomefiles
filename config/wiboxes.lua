@@ -9,16 +9,16 @@
 ]]
 
 local obvious = {
-  wlan    = require("obvious.wlan"),
-  volume  = require("obvious.volume_alsa"),
-  battery = require("obvious.battery")
+  wlan    = require 'obvious.wlan',
+  volume  = require 'obvious.volume_alsa',
+  battery = require 'obvious.battery'
 }
 
-local wibox = require("wibox")
+local wibox = require 'wibox'
 
 local lib = {
-  widget  = require("lib.widgets"),
-  battery = require("lib.battery")
+  widget  = require 'lib.widgets',
+  battery = require 'lib.battery'
 }
 
 top_wiboxes = {}
@@ -108,7 +108,7 @@ for s = 1, screen.count() do
   right_layout:add(lib.widget.separator())
   right_layout:add(obvious.wlan().widget)
   right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.volume('1', 'PCM'))
+  right_layout:add(obvious.volume('1', 'Master'))
   right_layout:add(lib.widget.separator())
   if lib.battery.has_battery() then
     right_layout:add(obvious.battery())

@@ -12,7 +12,7 @@
 
 ]]
 
-local awful = require("awful")
+local awful = require 'awful'
 local run   = awful.util.spawn_with_shell
 local zqt   = "zenity --question --text "
 

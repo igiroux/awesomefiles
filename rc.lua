@@ -7,11 +7,12 @@
 ]]
 
 -- Libraries
-awful           = require("awful")
-awful.rules     = require("awful.rules")
-awful.autofocus = require("awful.autofocus")
-beautiful       = require("beautiful")
-dedug           = require("lib.debug")
+awful           = require 'awful'
+awful.rules     = require 'awful.rules'
+awful.autofocus = require 'awful.autofocus'
+beautiful       = require 'beautiful'
+dedug           = require 'lib.debug'
+naughty         = require 'naughty'
 
 -- Variable definitions
 __dir__         = awful.util.getdir('config')

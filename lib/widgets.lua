@@ -8,8 +8,8 @@
 
 ]]
 
-local wibox  = require('wibox')
-local oclock = require('obvious.clock')
+local wibox  = require 'wibox'
+local oclock = require 'obvious.clock'
 
 module('lib.widgets')
 
