@@ -9,9 +9,11 @@
 ]]
 
 local obvious = {
-  wlan    = require 'obvious.wlan',
-  volume  = require 'obvious.volume_alsa',
-  battery = require 'obvious.battery'
+  wlan         = require 'obvious.wlan',
+  volume_alsa  = require 'obvious.volume_alsa',
+  battery      = require 'obvious.battery',
+  cpu          = require 'obvious.cpu',
+  mem          = require 'obvious.mem'
 }
 
 local wibox = require 'wibox'
@@ -106,10 +108,14 @@ for s = 1, screen.count() do
   right_layout:add(lib.widget.separator())
   right_layout:add(lib.widget.clock())
   right_layout:add(lib.widget.separator())
+  right_layout:add(obvious.mem():set_type("textbox"):set_format("mem: %3d%%").widget)
+  right_layout:add(lib.widget.separator())
+  right_layout:add(obvious.cpu():set_type("textbox"):set_format("cpu: %3d%%").widget)
+  right_layout:add(lib.widget.separator())
   -- determine device with: iw dev
   right_layout:add(obvious.wlan('wlp5s0').widget)
   right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.volume('1', 'Master'))
+  right_layout:add(obvious.volume_alsa('1', 'Master'))
   right_layout:add(lib.widget.separator())
   if lib.battery.has_battery() then
     right_layout:add(obvious.battery())
