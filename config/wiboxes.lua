@@ -106,7 +106,8 @@ for s = 1, screen.count() do
   right_layout:add(lib.widget.separator())
   right_layout:add(lib.widget.clock())
   right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.wlan().widget)
+  -- determine device with: iw dev
+  right_layout:add(obvious.wlan('wlp5s0').widget)
   right_layout:add(lib.widget.separator())
   right_layout:add(obvious.volume('1', 'Master'))
   right_layout:add(lib.widget.separator())
