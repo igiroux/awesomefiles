@@ -4,11 +4,18 @@
 
 My Awesome WM config
 
-## Requirements
+## This configuration uses following software
 
 * Tango Icon Theme
 * Rxvt Unicode
 * Vim
+* Scrot
+* Firefox
+* PCManFM
+* Xscreensaver
+* Alsa (lib/util/plugins/etc.)
+* Ponymix
+* Mpd
 
 ## License
 
