@@ -124,6 +124,8 @@ globalkeys = awful.util.table.join(
   awful.key({                   }, "XF86HomePage",   function () awful.util.spawn(browser) end),
   awful.key({                   }, "XF86Calculator", function () awful.util.spawn(calculator) end),
   awful.key({                   }, "XF86MyComputer", function () awful.util.spawn(filebrowser) end),
+  awful.key({                   }, "XF86MonBrightnessDown", function () awful.util.spawn('xbacklight -dec 10') end),
+  awful.key({                   }, "XF86MonBrightnessUp",   function () awful.util.spawn('xbacklight -inc 10') end),
 
   -- Standard program
   awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
