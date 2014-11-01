@@ -113,7 +113,7 @@ for s = 1, screen.count() do
   right_layout:add(obvious.cpu():set_type("textbox"):set_format("cpu: %3d%%").widget)
   right_layout:add(lib.widget.separator())
   -- determine device with: iw dev
-  right_layout:add(obvious.wlan('wlp5s0').widget)
+  right_layout:add(obvious.wlan('wlp4s0').widget)
   right_layout:add(lib.widget.separator())
   right_layout:add(obvious.volume_alsa())
   right_layout:add(lib.widget.separator())
