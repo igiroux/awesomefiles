@@ -115,7 +115,7 @@ for s = 1, screen.count() do
   -- determine device with: iw dev
   right_layout:add(obvious.wlan('wlp5s0').widget)
   right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.volume_alsa('1', 'Master'))
+  right_layout:add(obvious.volume_alsa())
   right_layout:add(lib.widget.separator())
   if lib.battery.has_battery() then
     right_layout:add(obvious.battery())
