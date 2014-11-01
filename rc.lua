@@ -20,6 +20,8 @@ terminal        = "urxvtc"
 editor          = os.getenv("EDITOR") or "vim"
 editor_cmd      = terminal .. " -e " .. editor
 browser         = "firefox"
+calculator      = "speedcrunch"
+filebrowser     = "pcmanfm"
 screensaver     = "xscreensaver-command -activate"
 modkey          = "Mod4"
 

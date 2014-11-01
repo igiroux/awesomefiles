@@ -121,13 +121,15 @@ globalkeys = awful.util.table.join(
   awful.key({                   }, "XF86AudioMute",        togglemute),
 
   -- Misc
-  awful.key({                   }, "XF86HomePage", "firefox"),
+  awful.key({                   }, "XF86HomePage",   function () awful.util.spawn(browser) end),
+  awful.key({                   }, "XF86Calculator", function () awful.util.spawn(calculator) end),
+  awful.key({                   }, "XF86MyComputer", function () awful.util.spawn(filebrowser) end),
 
   -- Standard program
   awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
   awful.key({                   }, "Print",
     function ()
-      awful.util.spawn_with_shell("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'")
+      awful.util.spawn_with_shell("scrot -e 'mv $f ~/media/pictures/screenshots/ 2>~/log/scrot'")
     end),
   awful.key({ modkey, "Control" }, "r",     awesome.restart),
   awful.key({ modkey, "Shift"   }, "q",     awesome.quit),

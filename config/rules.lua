@@ -85,6 +85,11 @@ awful.rules.rules = {
     except     = { role = "ConversationsWindow" },
     properties = { tag = tags[1][4] },
     callback   = awful.client.setslave
+  },
+
+  {
+    rule       = { class = "Speedcrunch" },
+    properties = { floating = true, focus = true, width = 600, height = 600 }
   }
 }
 

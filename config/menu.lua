@@ -54,7 +54,8 @@ media_menu = {
 }
 
 system_menu = {
-  { "&PCManFM",  "pcmanfm" }
+  { "&PCManFM",  "pcmanfm" },
+  { "&Speedcrunch",  "speedcrunch" }
 }
 
 -- Create a main menu
