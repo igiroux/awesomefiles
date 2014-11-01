@@ -6,16 +6,23 @@ My Awesome WM config
 
 ## This configuration uses following software
 
-* Tango Icon Theme
-* Rxvt Unicode
-* Vim
-* Scrot
-* Firefox
-* PCManFM
-* Xscreensaver
-* Alsa (lib/util/plugins/etc.)
-* Ponymix
-* Mpd
+* rxvt (with unicode support)
+* vim
+* scrot
+* firefox
+* pcmanfm
+* xscreensaver
+* alsa (lib/util/plugins/etc.)
+* ponymix
+* mpd
+* acpi
+* acpid
+* iwconfig
+
+### Temes
+
+* Tango icon theme (standard edition)
+* "Zenburn" awesome theme
 
 ## License
 
