@@ -14,18 +14,8 @@ beautiful       = require 'beautiful'
 dedug           = require 'lib.debug'
 naughty         = require 'naughty'
 
--- Variable definitions
-__dir__         = awful.util.getdir('config')
-terminal        = "urxvtc"
-editor          = os.getenv("EDITOR") or "vim"
-editor_cmd      = terminal .. " -e " .. editor
-browser         = "firefox"
-calculator      = "speedcrunch"
-filebrowser     = "pcmanfm"
-screensaver     = "xscreensaver-command -activate"
-modkey          = "Mod4"
-
 -- Open system files and execute their contents as Lua chunks
+dofile(awful.util.getdir('config') .. '/env.lua')
 dofile(__dir__ .. "/config/errors.lua")
 dofile(__dir__ .. "/config/theme.lua")
 dofile(__dir__ .. "/config/layouts.lua")

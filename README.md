@@ -26,5 +26,5 @@ My Awesome WM config
 
 ## License
 
-Licensed under the MIT License.
+Licensed under the same terms as Lua itself (MIT License).
 &copy; 2014 [Serghei Iakovlev](https://github.com/sergeyklay)
