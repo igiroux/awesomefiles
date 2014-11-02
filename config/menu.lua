@@ -22,7 +22,7 @@ develop_menu = {
   { "&PhpStorm",      "/opt/phpstorm/bin/phpstorm.sh" },
   { "&Sublime Text",  "subl"                          },
   { "&Vim",            editor_cmd                     },
-  { "&Robomongo",      robomongo                      }
+  { "&Robomongo",      'robomongo'                    }
 }
 
 www_menu = {

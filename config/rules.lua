@@ -44,13 +44,13 @@ awful.rules.rules = {
   },
 
   {
-    rule_any   = { class = { "Chromium", "Google-chrome-stable" } },
+    rule_any   = { class = { "Chromium", "Google-chrome-stable", "luakit" } },
     properties = { tag = tags[1][2] }
   },
 
   {
-    rule       = { class = "luakit" },
-    properties = { tag = tags[1][2] }
+    rule       = { class = "robomongo" },
+    properties = { tag = tags[1][5] }
   },
 
   {
