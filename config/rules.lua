@@ -44,7 +44,7 @@ awful.rules.rules = {
   },
 
   {
-    rule       = { class = "Chromium" },
+    rule_any   = { class = { "Chromium", "Google-chrome-stable" } },
     properties = { tag = tags[1][2] }
   },
 

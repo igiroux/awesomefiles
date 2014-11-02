@@ -26,13 +26,13 @@ develop_menu = {
 }
 
 www_menu = {
-  { "&Chromium",     "chromium"         },
-  { "&Firefox",      "firefox"          },
-  { "&Thunderbird",  "thunderbird"      },
-  { "&Psi+",         "psi-plus"         },
-  { "&FileZilla",    "filezilla"        },
-  { "&Skype",        "skype"            },
-  { "&Transmission", "transmission-gtk" }
+  { "&Google Chrome","google-chrome-stable" },
+  { "&Firefox",      "firefox"              },
+  { "&Thunderbird",  "thunderbird"          },
+  { "&Psi+",         "psi-plus"             },
+  { "&FileZilla",    "filezilla"            },
+  { "&Skype",        "skype"                },
+  { "&Transmission", "transmission-gtk"     }
 }
 
 graphic_menu = {
