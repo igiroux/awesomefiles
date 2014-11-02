@@ -18,6 +18,8 @@ My Awesome WM config
 * acpi
 * acpid
 * iwconfig
+* polkit
+* systemd
 
 ### Temes
 
