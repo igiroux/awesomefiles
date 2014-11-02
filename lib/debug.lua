@@ -8,7 +8,7 @@
 ]]
 
 local tostring = tostring
-local naughty = require("naughty")
+local naughty  = require 'naughty'
 
 module("lib.debug")
 

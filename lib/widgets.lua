@@ -13,15 +13,10 @@ local oclock = require 'obvious.clock'
 
 module('lib.widgets')
 
-local editor_cmd = editor_cmd
-
--- Custom Variables
-local gray_color = "#333333"
-
 -- Separator separator for panels
 function separator()
   local sep = wibox.widget.textbox()
-  sep:set_markup('<span foreground="' .. gray_color .. '"> | </span>')
+  sep:set_markup('<span foreground="#333333"> | </span>')
 
   return sep
 end
