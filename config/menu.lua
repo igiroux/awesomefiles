@@ -53,6 +53,11 @@ media_menu = {
   { "&SMplayer",  "smplayer" }
 }
 
+office_menu = {
+  { "&Writer", "libreoffice --writer" },
+  { "&Calc",   "libreoffice --calc"   }
+}
+
 system_menu = {
   { "&PCManFM",  "pcmanfm" },
   { "&Speedcrunch",  "speedcrunch" }
@@ -62,6 +67,7 @@ system_menu = {
 main_menu = awful.menu({
   items = {
     { "&Develop",  develop_menu },
+    { "&Office",   office_menu  },
     { "&Internet", www_menu     },
     { "&Graphic",  graphic_menu },
     { "&Media",    media_menu   },
