@@ -90,6 +90,18 @@ awful.rules.rules = {
   {
     rule       = { class = "Speedcrunch" },
     properties = { floating = true, focus = true, width = 600, height = 600 }
+  },
+
+  -- Full screeen fix for Firefox video player
+  {
+    rule       = { instance = "plugin-container" },
+    properties = {
+      onfocus      = true,
+      floating     = true,
+      border_width = 0,
+      ontop        = true,
+      fullscreen   = true
+    }
   }
 }
 
