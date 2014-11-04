@@ -28,7 +28,7 @@ local wiboxes = {
   bottom = {}
 }
 
-local promptbox = {}
+promptbox = {}
 local layoutbox = {}
 
 taglist   = {}
