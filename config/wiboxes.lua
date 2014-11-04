@@ -23,9 +23,13 @@ local lib = {
   battery = require 'lib.battery'
 }
 
-top_wiboxes = {}
-promptbox   = {}
-layoutbox   = {}
+local wiboxes = {
+  top    = {},
+  bottom = {}
+}
+
+local promptbox = {}
+local layoutbox = {}
 
 taglist   = {}
 taglist.buttons = awful.util.table.join(
@@ -93,43 +97,53 @@ for s = 1, screen.count() do
   -- Create a tasklist widget
   tasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklist.buttons)
 
-  -- Create the top wibox
-  top_wiboxes[s] = awful.wibox({ position = "top", height="15", screen = s })
+  -- Create the wiboxes
+  wiboxes.top[s]    = awful.wibox({ position = "top", height="15", screen = s })
+  wiboxes.bottom[s] = awful.wibox({ position = 'bottom', height='15', screen = s })
 
   -- Widgets that are aligned to the left
-  local left_layout = wibox.layout.fixed.horizontal()
-  left_layout:add(launcher)
-  left_layout:add(taglist[s])
-  left_layout:add(promptbox[s])
+  local top_left = wibox.layout.fixed.horizontal()
+  top_left:add(launcher)
+  top_left:add(taglist[s])
+  top_left:add(promptbox[s])
 
   -- Widgets that are aligned to the right
-  local right_layout = wibox.layout.fixed.horizontal()
-  if s == 1 then right_layout:add(wibox.widget.systray()) end
-  right_layout:add(lib.widget.separator())
-  right_layout:add(lib.widget.clock())
-  right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.mem():set_type("textbox"):set_format("mem: %3d%%").widget)
-  right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.cpu():set_type("textbox"):set_format("cpu: %3d%%").widget)
-  right_layout:add(lib.widget.separator())
-  -- determine device with: iw dev
-  right_layout:add(obvious.wlan('wlp4s0').widget)
-  right_layout:add(lib.widget.separator())
-  right_layout:add(obvious.volume_alsa())
-  right_layout:add(lib.widget.separator())
-  if lib.battery.has_battery() then
-    right_layout:add(obvious.battery())
-    right_layout:add(lib.widget.separator())
+  local top_right = wibox.layout.fixed.horizontal()
+  if s == 1 then
+    top_right:add(wibox.widget.systray())
   end
-  right_layout:add(layoutbox[s])
+  top_right:add(lib.widget.separator())
+  top_right:add(lib.widget.clock())
+  top_right:add(lib.widget.separator())
+  top_right:add(obvious.mem():set_type("textbox"):set_format("mem: %3d%%").widget)
+  top_right:add(lib.widget.separator())
+  top_right:add(obvious.cpu():set_type("textbox"):set_format("cpu: %3d%%").widget)
+  top_right:add(lib.widget.separator())
+  -- determine device with: iw dev
+  top_right:add(obvious.wlan('wlp4s0').widget)
+  top_right:add(lib.widget.separator())
+  top_right:add(obvious.volume_alsa())
+  top_right:add(lib.widget.separator())
+  if lib.battery.has_battery() then
+    top_right:add(obvious.battery())
+    top_right:add(lib.widget.separator())
+  end
+  top_right:add(layoutbox[s])
+
+  -- Widgets that are aligned to the bottom right
+  local bottom_right = wibox.layout.fixed.horizontal()
 
   -- Now bring it all together (with the tasklist in the middle)
-  local layout = wibox.layout.align.horizontal()
-  layout:set_left(left_layout)
-  layout:set_middle(tasklist[s])
-  layout:set_right(right_layout)
+  local top = wibox.layout.align.horizontal()
+  top:set_left(top_left)
+  top:set_middle(tasklist[s])
+  top:set_right(top_right)
 
-  top_wiboxes[s]:set_widget(layout)
+  local bottom = wibox.layout.align.horizontal()
+  bottom:set_right(bottom_right)
+
+  wiboxes.top[s]:set_widget(top)
+  wiboxes.bottom[s]:set_widget(bottom)
 
 end
 
