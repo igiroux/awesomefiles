@@ -20,7 +20,7 @@ awesome_menu = {
 
 develop_menu = {
   { "&PhpStorm",      "/opt/phpstorm/bin/phpstorm.sh" },
-  { "&Sublime Text",  "subl"                          },
+  { "&Sublime Text",  "subl3"                         },
   { "&Vim",            editor_cmd                     },
   { "&Robomongo",      'robomongo'                    }
 }
