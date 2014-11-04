@@ -115,10 +115,6 @@ for s = 1, screen.count() do
   top_right:add(lib.widget.separator())
   top_right:add(lib.widget.clock())
   top_right:add(lib.widget.separator())
-  top_right:add(obvious.mem():set_type("textbox"):set_format("mem: %3d%%").widget)
-  top_right:add(lib.widget.separator())
-  top_right:add(obvious.cpu():set_type("textbox"):set_format("cpu: %3d%%").widget)
-  top_right:add(lib.widget.separator())
   -- determine device with: iw dev
   top_right:add(obvious.wlan('wlp4s0').widget)
   top_right:add(lib.widget.separator())
@@ -132,6 +128,20 @@ for s = 1, screen.count() do
 
   -- Widgets that are aligned to the bottom right
   local bottom_right = wibox.layout.fixed.horizontal()
+  bottom_right:add(lib.widget.separator())
+  bottom_right:add(
+    obvious.mem()
+    :set_type("textbox")
+    :set_format("mem: %3d%%")
+    .widget
+  )
+  bottom_right:add(lib.widget.separator())
+  bottom_right:add(
+    obvious.cpu()
+    :set_type("textbox")
+    :set_format("cpu: %3d%%")
+    .widget
+  )
 
   -- Now bring it all together (with the tasklist in the middle)
   local top = wibox.layout.align.horizontal()
