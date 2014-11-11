@@ -13,7 +13,8 @@ local obvious = {
   volume_alsa  = require 'obvious.volume_alsa',
   battery      = require 'obvious.battery',
   cpu          = require 'obvious.cpu',
-  mem          = require 'obvious.mem'
+  mem          = require 'obvious.mem',
+  fs_usage     = require 'obvious.fs_usage'
 }
 
 local wibox = require 'wibox'
@@ -128,6 +129,19 @@ for s = 1, screen.count() do
 
   -- Widgets that are aligned to the bottom right
   local bottom_right = wibox.layout.fixed.horizontal()
+  bottom_right:add(
+    obvious.fs_usage('/')
+    :set_type('textbox')
+    :set_format('/root: %3d%%')
+    .widget
+  )
+  bottom_right:add(lib.widget.separator())
+  bottom_right:add(
+    obvious.fs_usage('/home')
+    :set_type('textbox')
+    :set_format('/home: %3d%%')
+    .widget
+  )
   bottom_right:add(lib.widget.separator())
   bottom_right:add(
     obvious.mem()

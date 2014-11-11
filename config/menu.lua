@@ -26,13 +26,14 @@ develop_menu = {
 }
 
 www_menu = {
-  { "&Google Chrome","google-chrome-stable" },
-  { "&Firefox",      "firefox"              },
-  { "&Thunderbird",  "thunderbird"          },
-  { "&Psi+",         "psi-plus"             },
-  { "&FileZilla",    "filezilla"            },
-  { "&Skype",        "skype"                },
-  { "&Transmission", "transmission-gtk"     }
+  { "&Google Chrome",      "google-chrome-stable" },
+  { "&Firefox",            "firefox"              },
+  { "Firefox &Developer", "firefox-developer"     },
+  { "&Thunderbird",        "thunderbird"          },
+  { "&Psi+",               "psi-plus"             },
+  { "&FileZilla",          "filezilla"            },
+  { "&Skype",              "skype"                },
+  { "&Transmission",       "transmission-gtk"     }
 }
 
 graphic_menu = {
@@ -59,8 +60,9 @@ office_menu = {
 }
 
 system_menu = {
-  { "&PCManFM",  "pcmanfm" },
-  { "&Speedcrunch",  "speedcrunch" }
+  { "&PCManFM",      "pcmanfm" },
+  { "&Speedcrunch",  "speedcrunch" },
+  { "&KeepPassX",    "keeppassx" }
 }
 
 -- Create a main menu
