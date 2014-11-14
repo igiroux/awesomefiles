@@ -55,14 +55,15 @@ media_menu = {
 }
 
 office_menu = {
-  { "&Writer", "libreoffice --writer" },
-  { "&Calc",   "libreoffice --calc"   }
+  { "&Writer",      "libreoffice --writer" },
+  { "&Calc",        "libreoffice --calc"   },
+  { "&OutWiker",    "outwiker"             },
+  { "&Speedcrunch", "speedcrunch"          }
 }
 
 system_menu = {
-  { "&PCManFM",      "pcmanfm" },
-  { "&Speedcrunch",  "speedcrunch" },
-  { "&KeepPassX",    "keeppassx" }
+  { "&PCManFM",   "pcmanfm"  },
+  { "&KeepPassX", "keepassx" }
 }
 
 -- Create a main menu
