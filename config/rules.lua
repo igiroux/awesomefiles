@@ -54,10 +54,13 @@ awful.rules.rules = {
   },
 
   {
-    rule       = { class = "keepassx" },
+    rule       = { class = "Keepassx" },
     properties = { tag = tags[1][5] }
   },
-
+  {
+    rule       = { name = "OutWiker" },
+    properties = { tag = tags[1][5] }
+  },
   {
     rule       = { class = "jetbrains-phpstorm" },
     properties = { tag = tags[1][6] }
